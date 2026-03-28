@@ -135,4 +135,4 @@ Frontend runs at `http://localhost:5173`
 
 ---
 
-© 2025 CampusOne. Built with the MERN Stack.
+© 2026 CampusOne. Built with the MERN Stack.
