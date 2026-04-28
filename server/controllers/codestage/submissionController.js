@@ -1,14 +1,13 @@
 const CodeSubmission = require("../../models/CodeSubmission");
 const { evaluateRunCode, evaluateSubmission } = require("../../services/evaluationService");
 
-// Queue disabled — using synchronous evaluation (no Redis required)
-// To re-enable: uncomment the block below and remove the null assignment
+// Queue enabled
 let submissionQueue = null;
-// try {
-//   submissionQueue = require("../../queues/submission.queue");
-// } catch (err) {
-//   console.warn("BullMQ queue not available — submissions will be synchronous.");
-// }
+try {
+  submissionQueue = require("../../queues/submission.queue");
+} catch (err) {
+  console.warn("BullMQ queue not available — submissions will be synchronous.");
+}
 
 const createSubmission = async (req, res) => {
   try {

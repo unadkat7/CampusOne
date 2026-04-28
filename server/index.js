@@ -14,6 +14,8 @@ const classroomRoutes = require("./routes/classroom");
 const hiresphereRoutes = require("./routes/hiresphere");
 const codestageRoutes = require("./routes/codestage");
 
+// Import background workers
+require("./workers/submission.worker");
 // Initialize Express app
 const app = express();
 
